@@ -63,7 +63,7 @@ function edit_note() {
 
   echo "Digite a nova versão da nota:"
   read -r new_note
-  sed -i "s/^$id .*/$id - $new_note/" "$NOTES_FILE"
+  sed -i "s/^$id .*/$id -> $new_note/" "$NOTES_FILE"
   notify-send Notes "Nota $id editada com sucesso!"
 }
 
